@@ -30,7 +30,8 @@ const App = () => {
 
   useEffect(() => {
     if (username && editorRef.current) {
-      const provider = new SocketIOProvider("http://localhost:3000", "monaco", ydoc, {
+      // const provider = new SocketIOProvider("http://localhost:3000", "monaco", ydoc, {
+      const provider = new SocketIOProvider(window.location.origin, "monaco", ydoc, {
         autoConnect: true
       });
 
